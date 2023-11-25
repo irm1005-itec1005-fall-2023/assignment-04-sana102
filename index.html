@@ -1,51 +1,47 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en-CA">
 
 <head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <!-- Set the CSS Reset File -->
-  <link rel="stylesheet" href="./reset.css" />
-
-  <!-- Set the main stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
-
-  <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hello Kitty's To-Do</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-
-  <!--
-
-    Assignment 04 - Finishing a Todo List App
-
-    Instructions:
-
-    Important checklist:
-
-    - Are users able to create and delete to do list items?
-    - Have you set a favicon? (included - but it's a rocket)
-    - Has a team member conducted a code review and left a GitHub Issue in your repo?
-    - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-  -->
-
-  <main>
-    <div id="app"></div>
-  </main>
-
-  <!-- Add JavaScript File -->
+  <div class="container">
+    <div class="todo-app">
+      <h2>todo-list el oh el<img src="./hellokitty.png" alt="Icon"></h2>
+      
+      <!-- Add a <form> element around your input and button -->
+      <form id="todo-form" onsubmit="event.preventDefault(); addTask();">
+        <div class="row">
+          <!-- Add a label for your input -->
+          <label for="input-box">˚ʚ♡ɞ˚</label>
+          <input type="text" id="input-box" placeholder="What are we doing today?">
+          <!-- Change the button type to submit -->
+          <button type="submit">Add</button>
+        </div>
+      </form>
+      
+      <!-- Add a main element -->
+      <main>
+        <ul id="list-container">
+          <!-- To-Do items will be added dynamically here -->
+        </ul>
+      </main>
+      
+      <button id="clear-button" onclick="clearCompletedTasks()">Clear Completed</button>
+    </div>
+    <!-- <div class="strawberry">
+      <img src="./strawberry.png" alt="Strawberry Shortcake" width="60">
+      <img src="./strawberry.png" alt="Strawberry Shortcake" width="60">
+      <img src="./strawberry.png" alt="Strawberry Shortcake" width="60">
+    </div>--> 
+  </div>
   <script src="./script.js"></script>
-
 </body>
+
 </html>
