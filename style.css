@@ -2,19 +2,30 @@ body {
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent horizontal scrollbar due to absolute positioning */
 }
 
 .container {
+  opacity: .9;
   background-image: url(./background1.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
   justify-content: center;
   height: 40px;
 }
 
+header {
+  background-color: white;
+  padding: 1px 20px 50px 40px;
+  text-align: center;
+  height: 90px;
+}
+header img {
+  cursor: pointer;
+}
 .todo-app {
   width: 100%;
   max-width: 540px;
@@ -22,12 +33,12 @@ body {
   margin: 100px auto 20px;
   padding: 40px 40px 70px;
   border-radius: 50px; /* Adjust the border radius as needed */
-  border: 6px solid #b0424f; /* Adjust the border color */
+  border: 6px solid #da85a1; /* Adjust the border color */
 }
 
 .todo-app h2 {
   margin-left: 93px;
-  color: #b12c3b;
+  color: #da85a1;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -39,6 +50,7 @@ body {
 }
 
 .row {
+  color: #da85a1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,13 +72,16 @@ button {
   border: none;
   outline: none;
   padding: 16px 50px;
-  background: #b12c3b;
+  background: #da85a1;
   color: #fffcfc;
   font-size: 16px;
   border-radius: 25px;
   cursor: pointer;
 }
 
+#complete-all-button {
+  background: #da85a1; /* Adjust the color for the "Complete All" button */
+}
 
 button:hover {
   opacity: 0.7;
@@ -81,17 +96,13 @@ ul li {
   position: relative;
 }
 
-.strawberry {
+.banner img {
   position: static;
-  background: #b12c3b;
-  border-radius: 60px;
-  padding: 2px 2px 2px 130px;
-  height: 50px;
-  width: 300px;
-  margin-left: 20px;
+  margin-left: 100px;
+  margin-bottom: 200px;
 }
 
-.strawberry {
+.banner {
   white-space: nowrap; /* Prevent line breaks */
 }
 
@@ -112,7 +123,7 @@ ul li::before {
 }
 
 ul li.checked {
-  color: #f7c2d1;
+  color: #da85a1;
   text-decoration: line-through;
 }
 
@@ -128,7 +139,7 @@ ul li span {
   width: 40px;
   height: 40px;
   font-size: 22px;
-  color: #b08c8c;
+  color: #da85a1;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -137,3 +148,31 @@ ul li span {
 ul li span:hover {
   background: #edeef0;
 }
+
+#good-job-message {
+  color: #e16488;
+  background-color: rgb(255, 226, 234);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.70;
+}
+
+/* Add styles for the flying bird */
+.flying-bird {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px; /* Adjust the size of the bird as needed */
+}
+
+#make-list-button {
+  background-color: #da85a1;
+  color: #fffcfc;
+  padding: 16px 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block; /* Ensure it's a block-level element to control width and margins */
+  margin: 30px auto; } /* Adjust the
