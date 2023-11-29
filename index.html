@@ -1,51 +1,56 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en-CA">
 
 <head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <!-- Set the CSS Reset File -->
-  <link rel="stylesheet" href="./reset.css" />
-
-  <!-- Set the main stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
-
-  <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>sanas cute app</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+  <div class="container">
+    <header>
+      <img src="./sanriologo.png" alt="logo" width="150" onclick="location.reload();">
+    </header>
 
-  <!--
+    <div class="todo-app" style="display: none;">
+      <h2> simple to-do list <img src="./hellokitty.png" alt="Icon"></h2>
 
-    Assignment 04 - Finishing a Todo List App
+      <form id="todo-form" onsubmit="event.preventDefault(); addTask();">
+        <div class="row">
+          <label for="input-box">˚ʚ♡ɞ˚</label>
+          <input type="text" id="input-box" placeholder="what's the plan for today?">
+          <button type="submit">add</button>
+        </div>
+      </form>
 
-    Instructions:
+      <div id="task-counters">
+        <p>Remaining tasks: <span id="remaining-count">0</span></p>
+        <p>Completed tasks: <span id="completed-count">0</span></p>
+      </div>
 
-    Important checklist:
+      <main>
+        <ul id="list-container">
+        </ul>
+      </main>
 
-    - Are users able to create and delete to do list items?
-    - Have you set a favicon? (included - but it's a rocket)
-    - Has a team member conducted a code review and left a GitHub Issue in your repo?
-    - Have you conducted a code review and left a GitHub Issue on your team member's repo?
+      <button id="complete-all-button" onclick="completeAllTasks()">complete All</button>
+      <div id="good-job-message" style="display: none;">
+        <p>good job! you completed all your tasks! ♡</p>
+      </div>
 
-  -->
+      <button id="clear-button" onclick="clearCompletedTasks()">Clear Completed</button>
+    </div>
 
-  <main>
-    <div id="app"></div>
-  </main>
+    <button id="make-list-button" onclick="toggleTodoApp()">lets get started! </button>
 
-  <!-- Add JavaScript File -->
+    <audio id="background-music" src="./hellokittysound.mp3" loop></audio>
+  </div>
+
   <script src="./script.js"></script>
-
 </body>
+
 </html>
