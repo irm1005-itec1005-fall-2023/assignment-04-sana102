@@ -1,9 +1,31 @@
+/* Add these styles to your style.css file */
+
+#clear-button {
+  background: #da85a1;
+  color: #ffffff;
+  padding: 16px 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+#clear-button:hover {
+  opacity: 0.7;
+}
+#clear-button:disabled {
+  display: none; /* Hide the button when disabled */
+  cursor: not-allowed;
+}
+
 body {
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
-  margin: 0; /* Remove default margin */
-  overflow: hidden; /* Prevent horizontal scrollbar due to absolute positioning */
+  margin: 0;
+  /* Remove or comment out the following line to enable scrolling */
+  /* overflow: hidden; */
 }
 
 .container {
@@ -15,6 +37,8 @@ body {
   min-height: 100vh;
   justify-content: center;
   height: 40px;
+  max-width: 100%; 
+  word-wrap: break-word;
 }
 
 header {
@@ -23,17 +47,19 @@ header {
   text-align: center;
   height: 90px;
 }
+
 header img {
   cursor: pointer;
 }
+
 .todo-app {
   width: 100%;
   max-width: 540px;
   background: #fefefe;
   margin: 100px auto 20px;
   padding: 40px 40px 70px;
-  border-radius: 50px; /* Adjust the border radius as needed */
-  border: 6px solid #da85a1; /* Adjust the border color */
+  border-radius: 50px;
+  border: 6px solid #da85a1;
 }
 
 .todo-app h2 {
@@ -80,7 +106,7 @@ button {
 }
 
 #complete-all-button {
-  background: #da85a1; /* Adjust the color for the "Complete All" button */
+  background: #da85a1;
 }
 
 button:hover {
@@ -94,6 +120,12 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+ul li:hover {
+  background-color: #ffebf2; /* Light pink background */
+  opacity: 0.7; /* 70% opacity */
 }
 
 .banner img {
@@ -103,12 +135,12 @@ ul li {
 }
 
 .banner {
-  white-space: nowrap; /* Prevent line breaks */
+  white-space: nowrap;
 }
 
 .strawberry img {
-  display: inline-block; /* Display images in a row */
-  margin-right: 5px; /* Add spacing between images, adjust as needed */
+  display: inline-block;
+  margin-right: 5px;
 }
 
 ul li::before {
@@ -151,7 +183,7 @@ ul li span:hover {
 
 #good-job-message {
   color: #e16488;
-  background-color: rgb(255, 226, 234);
+  background-color: #ffe2ea;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
@@ -163,7 +195,7 @@ ul li span:hover {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 50px; /* Adjust the size of the bird as needed */
+  width: 50px;
 }
 
 #make-list-button {
@@ -174,5 +206,22 @@ ul li span:hover {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  display: block; /* Ensure it's a block-level element to control width and margins */
-  margin: 30px auto; } /* Adjust the
+  display: block;
+  margin: 30px auto;
+}
+
+/* Add styles for task counters */
+#task-counters {
+  color: #da85a1;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #ffe2ea;
+  opacity: 0.70;
+  border-radius: 25px;
+}
+
+#remaining-count,
+#completed-count {
+  font-size: 18px;
+  margin: 0 10px;
+}
